@@ -21,16 +21,16 @@ const Details = ({ route, navigation }: DetailsPageProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const offset = useSharedValue(0);
 
-    // useLayoutEffect(() => {
-    //     navigation.setOptions({
-    //         headerTitle: item.title,
-    //         headerRight: () => (
-    //             <Pressable onPress={onToggle}>
-    //                 <Text style={{ marginRight: 16 }}>Open</Text>
-    //             </Pressable>
-    //         ),
-    //     });
-    // });
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerTitle: item.title,
+            headerRight: () => (
+                <Pressable onPress={onToggle}>
+                    <Text style={{ marginRight: 16 }}>Open</Text>
+                </Pressable>
+            ),
+        });
+    });
 
     const onToggle = () => {
         setIsOpen(!isOpen);
