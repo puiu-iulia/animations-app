@@ -21,7 +21,7 @@ const RootStackNavigator = () => {
         <RootStack.Navigator>
             <RootStack.Screen name="Home" component={Home} />
             <RootStack.Screen name="Details" component={Details} />
-            <RootStack.Screen name="List" component={List} />
+            <RootStack.Screen name="List" component={List} options={{ title: "Meals"}} />
         </RootStack.Navigator>
     );
 }
